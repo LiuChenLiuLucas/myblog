@@ -1,0 +1,3 @@
+[submodule "themes/jijian"]
+	path = themes/jijian
+	url = https://github.com/hcllmsx/hugo-jijian.git

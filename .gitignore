@@ -1,0 +1,27 @@
+# IDE 和编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.temp
+
+# 建议移除的项目
+/.hugo_build.lock
+/data/
+/public/
+/.venv/
+/static/pagefind/
+/node_modules/
+package-lock.json
+/*.ssjson
+/resources/
+
+# 配置工具文件
+极简(hugo-jijian)简易配置工具-config-tools.html

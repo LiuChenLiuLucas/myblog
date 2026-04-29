@@ -1,0 +1,12 @@
+{
+  "name": "iblog",
+  "version": "1.2.1",
+  "type": "module",
+  "scripts": {
+    "build": "hugo --gc --minify && node themes/jijian/assets/js/encrypt.js && npx pagefind --site public --output-path public/pagefind"
+  },
+  "dependencies": {
+    "pagefind": "^1.4.0",
+    "js-yaml": "^4.1.0"
+  }
+}

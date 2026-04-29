@@ -1,0 +1,112 @@
+baseURL: /
+title: LC'S BLOG
+copyright: LC'S Copyright
+theme: jijian
+
+defaultContentLanguage: zh-cn
+languageCode: zh-cn
+hasCJKLanguage: true
+timeZone: "Asia/Shanghai"
+
+# 基础设置
+enableRobotsTXT: true
+cleanDestinationDir: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# 导航栏配置
+menu:
+  main:
+    - identifier: posts
+      name: 博客
+      url: /posts/
+      weight: 1
+    - identifier: archives
+      name: 时光轴
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 20
+
+params:
+  env: production
+  description: "系统当中处理复杂的最佳手段就是抽象"
+  author: LC
+  ShowPageNums: true                  # 分页显示页码
+  ShowPostNavLinks: true              # 显示上下篇导航
+  # 顶部标签
+  label:
+    text: "LC'S BLOG"
+    iconHeight: 32
+
+  # 首页核心配置：解决你说的“空”和“换行”问题
+  portalMode:
+    enabled: true
+    Title: "LC'S BLOG"
+    # 使用 | 保留换行，注意每行中间的空行
+    Content: |
+      <div style="margin-bottom: 30px;">👋 <b>万物皆可抽象, 计算机科学中的所有难题，都可以通过增加一个抽象层来解决。</b></div>
+      
+      <ul style="list-style: disc; padding-left: 20px; margin: 0;">
+        <li style="margin-bottom: 12px;"><b>The fastest way to do something is not to do it at all.</b></li>
+        <li style="margin-bottom: 12px;;"><b>从事:</b> 大模型推理加速，KV加速，分布式计算，可观测性</li>
+        <li style="margin-bottom: 0;"><b>邮箱</b>：<a href="mailto:liuchentoayh@163.com">liuchentoayh@163.com</a></li>
+        
+      </ul>
+    AlignSocialIconsTo: left
+    # 增加按钮让主页更丰满
+    buttons:
+      - name: "所有文章"
+        url: "/posts"
+      - name: "归档"
+        url: "/archives"
+  socialIcons:
+    - name: email
+      title: 发送邮件
+      url: mailto:liuchentoayh@163.com
+    - name: "GitHub"
+      title: "GitHub"
+      url: "https://github.com/LiuChenLiuLucas"
+      hoverImage: "/img/github.svg"
+
+  # 资源配置
+  assets:
+    favicon: /img/overleaf-latex-editor-icon.svg
+
+  # 内容显示设置
+  hidemeta: false
+  DateFormat: "2006-01-02"
+  ShowWordCount: true
+  ShowReadingTime: true
+  defaultTheme: auto
+  hideSummary: false # 显示摘要，主页才不会空
+  ShowShareButtons: true
+  
+  # 目录设置
+  showtoc: true
+  tocopen: true
+
+# 内容渲染配置：关键！开启后才能支持音视频
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # 必须为 true，否则无法在文章里写 <video> 标签
+  highlight:
+    noClasses: false
+    lineNos: true
+    style: monokai
+
+# 搜索输出设置
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 搜索功能通常需要 JSON 索引
+
+# 性能优化
+minify:
+  disableXML: true
+  minifyOutput: true
